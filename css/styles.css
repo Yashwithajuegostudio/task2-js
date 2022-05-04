@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main-image{
+    border-radius: 30px;
+    border: 2px solid black;
+    width: 70vh;
+    height: 50vh;
+    align-items: center;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.image-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ flex-direction: row;
+}
+.image-row div img{
+    border-radius: 20px;
+    width: 10rem;
+    height: 9rem;
+    object-fit: cover;
+    cursor: pointer;
+    margin:0.5rem;
+   opacity: 0.5;
+    
+    
+}
