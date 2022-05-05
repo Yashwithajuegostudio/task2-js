@@ -1,29 +1,18 @@
-const images = document.getElementById("imageCollection").getElementsByTagName("img");
-let active =true;
+const images = document.querySelectorAll(".image-row img");
+
+const mainImage = document.getElementById('mainimg');
+
+
+
 for (items of images) {
-    
-    items.onclick = function () {
-       
-        this.style.cursor = 'hand';
-        this.style.border= '3px solid red';
-        this.style.opacity ="1";
-        active=true;
-    }
-  
-   items.onmouseout = function () {
-        this.style.cursor = 'pointer';
-        this.style.border="0px"
-        this.style.opacity ="0.5";
-        active=false;
-    }
-   
+    items.addEventListener('click', (e) => {
+        images.forEach(element => {
+            element.classList.remove("active");
+
+        });
+        mainImage.src = e.target.src;
+        e.target.classList.add("active");
+
+    });
 }
 
-function changeImage(event) 
-{
-  const targetElement = event.target ;
-    if(targetElement.tagName == "IMG")
-    {
-        mainimg.src = targetElement.getAttribute("src");    
-    }
-}
